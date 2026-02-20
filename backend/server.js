@@ -31,7 +31,7 @@ const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
         folder: 'vs_farms_products', // The folder name in your Cloudinary account
-        allowed_formats: ['jpg', 'png', 'jpeg', 'webp'],
+        allowed_formats: ['jpg', 'png', 'jpeg', 'webp', 'jfif', 'svg'],
     },
 });
 

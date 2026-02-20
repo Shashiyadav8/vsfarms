@@ -81,4 +81,10 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
+// Global Error Handler for Multer / Cloudinary / Express
+app.use((err, req, res, next) => {
+    console.error('Backend Error:', err);
+    res.status(500).json({ message: err.message || 'Fatal Server Error' });
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
